@@ -1,0 +1,38 @@
+nav {
+    background-color: rgb(30, 137, 224);
+    display: flex;
+    justify-content: center;
+    height: 30%;
+    width: 100%;
+}
+
+.am {
+    margin: 1em;
+    width: 9em;
+    height: 3em;
+    background-color: yellow;
+}
+
+main {
+    background-color: rgb(126, 194, 214);
+    display: flex;
+    border: 1px solid red;
+    height: 30em;
+    align-items: center;
+}
+
+.gran {
+    margin: 1em;
+    background-color: yellow;
+    border: 1px solid greenyellow;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 20%;
+}
+
+.especial {
+    flex-grow: 2;
+    
+}
+.largo{ height: 25em; }
+

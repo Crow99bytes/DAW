@@ -1,0 +1,77 @@
+
+
+/* Barra de navegación */
+nav {
+    background-color: black;
+    height: 5em;
+
+    display: flex;
+    align-items: center;
+}
+
+nav div {
+    flex-direction: flex-start;
+    margin: 0.5em 0em 0.5em 1em;
+    background-color: grey;
+    height: 3em;
+    width: 8em;
+    border-radius: 0.16em;
+}
+
+
+/* Contenido principal */
+main {
+    background-color: lightgrey;
+    height: 40em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+main div{
+    border-radius: 0.46em;
+    height: 90%;
+    margin: 0.5em;
+    background-color: white;
+
+    flex: 1 1 0;      
+    min-width: 0;
+    padding: 1em;
+    display: flex;  
+    flex-direction: column; 
+    text-justify: center;
+    overflow:hidden;
+}
+
+main div img {
+    width: 90%;
+    height: 50%;
+    align-self: center;
+    border: 1px solid black;
+    border-radius: 1em 3em 3em 5em;
+}
+.ancho{
+    flex: 2 1 0;      
+}
+
+
+/* Pié de Página */
+footer {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    height: 4em;
+}
+
+footer div {
+    margin: 0.5em;
+    
+    flex: 0.65 1 0;
+    background-color: gainsboro;
+    text-align: end;
+    padding-right: 1em;
+}
+.largo {
+    flex: 2 1 0;
+    background-color: gray;
+}
