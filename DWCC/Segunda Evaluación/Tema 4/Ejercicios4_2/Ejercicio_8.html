@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+
+    <script>
+
+        // Declaración de variables a usar en este ejercicio:
+        var n_filas = 30;
+        var n_asientos = 6;
+
+        // Math.floor(Math.random() * (max - min + 1)) + min;
+
+        function gen_array_avion(filas, asientos) {
+            var tmp_fila = new Array();
+            for (i = 0; i <= filas; i++) {
+                let tmp_asientos = [];
+                for (j = 0; j <= asientos; j++) {
+                    tmp_asientos[j] = 0;
+                }
+                tmp_fila[i] = tmp_asientos;
+            }
+            return tmp_fila;
+        }
+
+        function ver_final(valor1, valor2) {
+            if (valor1 <= n_filas && valor2 <= n_asientos) {
+                return true;
+            }
+            return false;
+        }
+
+        function asignaAsiento(tAsientos){
+            let resultado = false;
+
+            
+
+            return resultado;            
+        }
+        
+        asignaAsiento();
+
+    </script>
+    
+    
+</body>
+</html>
