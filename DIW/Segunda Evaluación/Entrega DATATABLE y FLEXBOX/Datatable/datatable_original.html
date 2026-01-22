@@ -1,14 +1,147 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" >
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datatable to wapa</title>
 
-    <link rel='stylesheet' href='/DataTables/datatables.css' />
-    <script src='/DataTables/datatables.js'></script>
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.8/css/jquery.dataTables.min.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <!-- DataTables JS -->
+  <script src="https://cdn.datatables.net/1.13.8/js/jquery.dataTables.min.js"></script>
+
 </head>
 <body>
-    
+
+    <table id="myTable" class="display">
+        <thead>
+        <tr>
+        <th>Nombre</th>
+        <th>Tipo</th>
+        <th>Coste de Créditos</th>
+        <th>Materiales Principales</th>
+        <th>Ubicación de Planos</th>
+        <th>Tiempo Fabricación</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr><td>Ash</td><td>Frame Clásico</td><td>15,000</td><td>2x Mórficos, 900x Circuitos, 750x Paquete de polímero, 900x Plástidos</td><td>Derrotar Assassin</td><td>72 horas</td></tr>
+        <tr><td>Ash Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Atlas</td><td>Frame Clásico</td><td>15,000</td><td>5x Neurodos, 850x Circuitos, 1,200x Restos, 1,000x Rubedo</td><td>Derrotar Golem</td><td>72 horas</td></tr>
+        <tr><td>Atlas Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Banshee</td><td>Frame Clásico</td><td>15,000</td><td>1x Mórficos, 150x Placa de aleación, 1,200x Restos, 1,000x Rubedo</td><td>Derrotar Stalker (Void Cascade)</td><td>72 horas</td></tr>
+        <tr><td>Banshee Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Baruuk</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas del Mercado</td><td>Mercado de Créditos</td><td>72 horas</td></tr>
+        <tr><td>Baruuk Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Caliban</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas Zariman Void Cascade</td><td>Zariman 10-0 (Void Cascade)</td><td>72 horas</td></tr>
+        <tr><td>Chroma</td><td>Frame Clásico</td><td>15,000</td><td>3x Neurodos, 600x Ferrita, 1,500x Nanoesporas, 900x Restos</td><td>Derrotar Frameboss: Hydroid</td><td>72 horas</td></tr>
+        <tr><td>Chroma Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Citrine</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas Zariman Void Cascade</td><td>Zariman 10-0 (Void Cascade)</td><td>72 horas</td></tr>
+        <tr><td>Cyte-09</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas Zariman Void Cascade</td><td>Zariman 10-0 (Void Cascade)</td><td>72 horas</td></tr>
+        <tr><td>Dagath</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas Zariman Void Cascade</td><td>Zariman 10-0 (Void Cascade)</td><td>72 horas</td></tr>
+        <tr><td>Dante</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas Zariman Void Cascade</td><td>Zariman 10-0 (Void Cascade)</td><td>72 horas</td></tr>
+        <tr><td>Ember</td><td>Frame Clásico</td><td>15,000</td><td>6x Neurodos, 1,200x Restos, 900x Circuitos, 1,000x Rubedo</td><td>Derrotar Vor en Mercury</td><td>72 horas</td></tr>
+        <tr><td>Ember Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Equinox</td><td>Frame Clásico</td><td>15,000</td><td>5x Neurodos, 850x Circuitos, 1,200x Restos, 1,000x Rubedo</td><td>Derrotar Tyl Regor en Saturn</td><td>72 horas</td></tr>
+        <tr><td>Equinox Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Excalibur</td><td>Frame Clásico</td><td>0</td><td>Se obtiene al iniciar el juego</td><td>Misión Tutorial</td><td>0 horas</td></tr>
+        <tr><td>Excalibur Prime</td><td>Frame Prime</td><td>0</td><td>Acceso exclusivo temprano</td><td>Exclusivo (Founder Pack)</td><td>N/A</td></tr>
+        <tr><td>Excalibur Umbra</td><td>Frame Especial</td><td>0</td><td>Recompensa de Quest</td><td>The Sacrifice Quest</td><td>0 horas</td></tr>
+        <tr><td>Frost</td><td>Frame Clásico</td><td>15,000</td><td>5x Neurodos, 850x Circuitos, 1,200x Restos, 1,000x Rubedo</td><td>Derrotar Captain Vor en Mercury</td><td>72 horas</td></tr>
+        <tr><td>Frost Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Gara</td><td>Frame Clásico</td><td>15,000</td><td>Minerales de Llanuras de Eidolon</td><td>The Plains of Eidolon / Saya's Vigil Quest</td><td>72 horas</td></tr>
+        <tr><td>Gara Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Garuda</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Misiones Void Fissure</td><td>Void Cascade / Void Fissures</td><td>72 horas</td></tr>
+        <tr><td>Garuda Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Gauss</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Bounties Vallis</td><td>Orb Vallis / Fortuna Bounties</td><td>72 horas</td></tr>
+        <tr><td>Gauss Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Grendel</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Void Cascade</td><td>Zariman 10-0 / Void Cascade</td><td>72 horas</td></tr>
+        <tr><td>Grendel Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Gyre</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Void Cascade</td><td>Zariman 10-0 / Void Cascade</td><td>72 horas</td></tr>
+        <tr><td>Harrow</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Void Cascade / Derelict Void Fissure</td><td>Orokin Void Cascade / Void Fissures</td><td>72 horas</td></tr>
+        <tr><td>Harrow Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Hildryn</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Bounties Vallis</td><td>Orb Vallis / Fortuna Bounties</td><td>72 horas</td></tr>
+        <tr><td>Hildryn Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Hydroid</td><td>Frame Clásico</td><td>15,000</td><td>3x Neurodos, 600x Ferrita, 1,500x Nanoesporas, 900x Restos</td><td>Derrotar Tyl Regor en Saturn</td><td>72 horas</td></tr>
+        <tr><td>Hydroid Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Inaros</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Bounties Planes Eidolon</td><td>The Sands of Inaros Quest</td><td>72 horas</td></tr>
+        <tr><td>Inaros Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Ivara</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Void Fissure Missions</td><td>Void Fissures (Lith/Meso/Neo)</td><td>72 horas</td></tr>
+        <tr><td>Ivara Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Jade</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Void Cascade</td><td>Zariman 10-0 / Void Cascade</td><td>72 horas</td></tr>
+        <tr><td>Khora</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Void Cascade</td><td>Zariman 10-0 / Void Cascade</td><td>72 horas</td></tr>
+        <tr><td>Khora Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Koumei</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Void Cascade</td><td>Zariman 10-0 / Void Cascade</td><td>24 horas</td></tr>
+        <tr><td>Kullervo</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Void Cascade</td><td>Zariman 10-0 / Void Cascade</td><td>72 horas</td></tr>
+        <tr><td>Lavos</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Cambion Drift</td><td>Cambion Drift / Heart of Deimos Quest</td><td>72 horas</td></tr>
+        <tr><td>Limbo</td><td>Frame Clásico</td><td>15,000</td><td>2x Neurodos, 1,500x Ferrita, 1,200x Restos, 600x Paquete de polímero</td><td>Derrotar Councilor Vay Hek en Earth</td><td>72 horas</td></tr>
+        <tr><td>Limbo Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Loki</td><td>Frame Clásico</td><td>15,000</td><td>1x Mórficos, 500x Ferrita, 150x Plástidos, 75x Paquete de polímero</td><td>Derrotar Captain Vor en Mercury</td><td>72 horas</td></tr>
+        <tr><td>Loki Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Mag</td><td>Frame Clásico</td><td>15,000</td><td>1x Neurodos, 300x Ferrita, 1,200x Restos, 150x Paquete de polímero</td><td>Derrotar Captain Vor en Mercury</td><td>72 horas</td></tr>
+        <tr><td>Mag Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Mesa</td><td>Frame Clásico</td><td>15,000</td><td>5x Neurodos, 850x Circuitos, 1,200x Restos, 1,000x Rubedo</td><td>Derrotar Corpus Boss (Alad V)</td><td>72 horas</td></tr>
+        <tr><td>Mesa Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Mirage</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Quest Hidden Message</td><td>Hidden Message Quest</td><td>72 horas</td></tr>
+        <tr><td>Mirage Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Nekros</td><td>Frame Clásico</td><td>15,000</td><td>3x Neurodos, 600x Ferrita, 1,500x Nanoesporas, 900x Restos</td><td>Derrotar Lephantis en Orokin Derelict</td><td>72 horas</td></tr>
+        <tr><td>Nekros Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Nezha</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Bounties Void Fissure</td><td>Void Fissures / Void Cascade</td><td>72 horas</td></tr>
+        <tr><td>Nezha Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Nidus</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Cambion Drift</td><td>Cambion Drift / Heart of Deimos Quest</td><td>72 horas</td></tr>
+        <tr><td>Nidus Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Nova</td><td>Frame Clásico</td><td>15,000</td><td>2x Neurodos, 1,500x Ferrita, 1,200x Restos, 600x Paquete de polímero</td><td>Derrotar Raptors en Void Lith</td><td>72 horas</td></tr>
+        <tr><td>Nova Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Nyx</td><td>Frame Clásico</td><td>15,000</td><td>2x Neurodos, 1,500x Ferrita, 1,200x Restos, 600x Paquete de polímero</td><td>Derrotar Corrupted vor / Assassination</td><td>72 horas</td></tr>
+        <tr><td>Nyx Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Oberon</td><td>Frame Clásico</td><td>15,000</td><td>3x Neurodos, 750x Circuitos, 1,200x Restos, 1,000x Rubedo</td><td>Derrotar Manics en Void Fissure</td><td>72 horas</td></tr>
+        <tr><td>Oberon Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Octavia</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Bounties Void Fissure</td><td>Void Fissures / Void Cascade</td><td>72 horas</td></tr>
+        <tr><td>Octavia Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Oraxia</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Void Cascade</td><td>Zariman 10-0 / Void Cascade</td><td>72 horas</td></tr>
+        <tr><td>Protea</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Bounties Void Fissure</td><td>Void Fissures / Void Cascade</td><td>72 horas</td></tr>
+        <tr><td>Protea Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Qorvex</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Void Cascade</td><td>Zariman 10-0 / Void Cascade</td><td>72 horas</td></tr>
+        <tr><td>Revenant</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Bounties Void Fissure</td><td>Void Fissures / Void Cascade</td><td>72 horas</td></tr>
+        <tr><td>Revenant Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Rhino</td><td>Frame Clásico</td><td>15,000</td><td>1x Mórficos, 500x Ferrita, 150x Plástidos, 75x Paquete de polímero</td><td>Derrotar Captain Vor en Mercury</td><td>24 horas</td></tr>
+        <tr><td>Rhino Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Saryn</td><td>Frame Clásico</td><td>15,000</td><td>3x Neurodos, 600x Ferrita, 1,500x Nanoesporas, 900x Restos</td><td>Derrotar Kela De Thaym en Sedna</td><td>72 horas</td></tr>
+        <tr><td>Saryn Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Styanax</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Void Cascade</td><td>Zariman 10-0 / Void Cascade</td><td>72 horas</td></tr>
+        <tr><td>Temple</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Void Cascade</td><td>Zariman 10-0 / Void Cascade</td><td>72 horas</td></tr>
+        <tr><td>Titania</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Void Cascade</td><td>Zariman 10-0 / Void Cascade</td><td>72 horas</td></tr>
+        <tr><td>Titania Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Trinity</td><td>Frame Clásico</td><td>15,000</td><td>3x Neurodos, 600x Ferrita, 1,500x Nanoesporas, 900x Restos</td><td>Derrotar Lephantis en Derelict</td><td>72 horas</td></tr>
+        <tr><td>Trinity Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Valkyr</td><td>Frame Clásico</td><td>15,000</td><td>2x Neurodos, 1,500x Ferrita, 1,200x Restos, 600x Paquete de polímero</td><td>Derrotar Alad V en Venus</td><td>72 horas</td></tr>
+        <tr><td>Valkyr Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Vauban</td><td>Frame Clásico</td><td>15,000</td><td>3x Neurodos, 600x Ferrita, 1,500x Nanoesporas, 900x Restos</td><td>Derrotar Lephantis en Derelict</td><td>72 horas</td></tr>
+        <tr><td>Vauban Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Volt</td><td>Frame Clásico</td><td>15,000</td><td>1x Mórficos, 500x Ferrita, 150x Plástidos, 75x Paquete de polímero</td><td>Derrotar Captain Vor en Mercury</td><td>72 horas</td></tr>
+        <tr><td>Volt Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Voruna</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Void Cascade</td><td>Zariman 10-0 / Void Cascade</td><td>72 horas</td></tr>
+        <tr><td>Wisp</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Bounties Void Fissure</td><td>Void Fissures / Void Cascade</td><td>72 horas</td></tr>
+        <tr><td>Wisp Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Wukong</td><td>Frame Clásico</td><td>15,000</td><td>2x Neurodos, 1,500x Ferrita, 1,200x Restos, 600x Paquete de polímero</td><td>Derrotar Lieutenant Lech Kril en Fobos</td><td>72 horas</td></tr>
+        <tr><td>Wukong Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        <tr><td>Yareli</td><td>Frame Clásico</td><td>15,000</td><td>Recompensas de Void Cascade</td><td>Zariman 10-0 / Void Cascade</td><td>72 horas</td></tr>
+        <tr><td>Zephyr</td><td>Frame Clásico</td><td>15,000</td><td>3x Neurodos, 600x Ferrita, 1,500x Nanoesporas, 900x Restos</td><td>Derrotar Lephantis en Derelict</td><td>72 horas</td></tr>
+        <tr><td>Zephyr Prime</td><td>Frame Prime</td><td>25,000</td><td>Planos de Reliquias del Vacío</td><td>Misiones de Reliquias Orokin</td><td>72 horas</td></tr>
+        </tbody>
+    </table>
+
+
+  <script>
+    var tabla = new DataTable('#myTable' , {
+        order: [[2, 'asc']]
+        
+    });
+  </script>
+
 </body>
 </html>
