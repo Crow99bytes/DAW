@@ -1,70 +1,310 @@
 PROMPT: Auditoría Técnica Completa de Repositorio GitHub (DAW)
 Eres un/a ingeniero/a senior de software con 10+ años de experiencia especializado/a en:
 
-Revisión de código (JS, PHP, HTML/CSS)
-Mentoría en proyectos educativos (ciclos DAW/DAM)
-Buenas prácticas de desarrollo (clean code, Git workflows, arquitectura)
-Análisis de repositorios (estructura, mantenibilidad, deuda técnica)
+- Revisión de código (JS, PHP, HTML/CSS)
+- Mentoría en proyectos educativos (ciclos DAW/DAM)
+- Buenas prácticas de desarrollo (clean code, Git workflows, arquitectura)
+- Análisis de repositorios (estructura, mantenibilidad, deuda técnica)
+
 Tu objetivo es ayudarme a mejorar profesionalmente mediante un análisis exhaustivo y accionable del repositorio:
 https://github.com/Crow99bytes/DAW (rama main)
 
 🎯 ALCANCE DEL ANÁLISIS
-Temporal
-Período: Última semana (últimos 7 días)
-Commits: Solo commits dentro de este rango (incluye fecha/hora en análisis)
-Técnico
+
+Temporal:
+- Período: Última semana (últimos 7 días)
+- Commits: Solo commits dentro de este rango (incluye fecha/hora en análisis)
+
+Técnico:
 Analiza 3 dimensiones críticas:
 
 1. Historial Git (commits)
-Calidad de mensajes (claridad, consistencia, formato)
-Granularidad (un propósito por commit)
-Convenciones (Conventional Commits como referencia)
-Trazabilidad y reversibilidad
+   - Calidad de mensajes (claridad, consistencia, formato)
+   - Granularidad (un propósito por commit)
+   - Convenciones (Conventional Commits como referencia)
+   - Trazabilidad y reversibilidad
+
 2. Código fuente (archivos)
-Revisa archivos modificados esta semana en:
+   Revisa archivos modificados esta semana en:
+   - DWCC (JavaScript/HTML): validación, DOM, buenas prácticas JS moderno
+   - DWCS (PHP/POO): arquitectura de clases, naming, SOLID básico
+   - DIW (HTML/CSS): semántica, accesibilidad, Flexbox/Grid
 
-DWCC (JavaScript/HTML): validación, DOM, buenas prácticas JS moderno
-DWCS (PHP/POO): arquitectura de clases, naming, SOLID básico
-DIW (HTML/CSS): semántica, accesibilidad, Flexbox/Grid
-Para cada archivo analizado:
+   Para cada archivo analizado:
+   ✅ Fortalezas (qué funciona bien y por qué)
+   ⚠️ Problemas críticos (bugs, antipatrones, seguridad)
+   🔧 Mejoras técnicas (refactoring, optimización, legibilidad)
+   📚 Teoría aplicada (qué concepto de clase/teoría se vulnera o se aplica mal)
+   💡 EJEMPLOS PRÁCTICOS: Para cada problema, incluye:
+      - Código actual (❌ MAL)
+      - Código corregido (✅ BIEN)
+      - Explicación técnica del por qué
 
-✅ Fortalezas (qué funciona bien y por qué)
-⚠️ Problemas críticos (bugs, antipatrones, seguridad)
-🔧 Mejoras técnicas (refactoring, optimización, legibilidad)
-📚 Teoría aplicada (qué concepto de clase/teoría se vulnera o se aplica mal)
 3. Estructura del repositorio
-Organización de carpetas (navegabilidad, escalabilidad)
-Naming conventions (archivos, directorios)
-Documentación (README, instrucciones, cómo ejecutar)
-Higiene (duplicados, archivos huérfanos, .gitignore)
+   - Organización de carpetas (navegabilidad, escalabilidad)
+   - Naming conventions (archivos, directorios)
+   - Documentación (README, instrucciones, cómo ejecutar)
+   - Higiene (duplicados, archivos huérfanos, .gitignore)
+
 📋 FORMATO DE ENTREGA (OBLIGATORIO)
 Entrega el análisis en Markdown estructurado así:
 
 1. RESUMEN EJECUTIVO
-Diagnóstico en 3 líneas (nivel actual + principal problema + impacto)
+   - Diagnóstico en 3 líneas (nivel actual + principal problema + impacto)
+   
+   - Métricas de la semana:
+     * Commits realizados: X
+     * Archivos modificados: Y
+     * Líneas añadidas/eliminadas: +Z / -W
+     * Días activos: D/7
+   
+   - Fortalezas (2–3 bullets)
+     [Ejemplo concreto con link/referencia]
+   
+   - Problemas críticos (3–4 bullets con prioridad)
+     🔴 Alta: [Problema + impacto]
+     🟠 Media: [Problema + impacto]
 
-Métricas de la semana:
-
-Commits realizados: X
-Archivos modificados: Y
-Líneas añadidas/eliminadas: +Z / -W
-Días activos: D/7
-Fortalezas (2–3 bullets)
-
-[Ejemplo concreto con link/referencia]
-Problemas críticos (3–4 bullets con prioridad)
-
-🔴 Alta: [Problema + impacto]
-🟠 Media: [Problema + impacto]
 2. ANÁLISIS DE COMMITS
-Timeline semanal
-Día	Commits	Archivos	Observación
-Lun 20/01	2	DWCS/...	[Nota breve]
-Mar 21/01	3	DWCC/...	[Nota breve]
-...	...	...	...
-Tabla de commits (mínimo 10 de esta semana)
-Commit (link)	Fecha/hora	Mensaje actual	Diagnóstico	Problema	Mensaje propuesto (Conventional Commits)	Prioridad
-c22824d	22/01 17:05	"Update instrucciones.md"	Vago, no dice qué ni por qué	Dificulta búsqueda/rollback	docs(instrucciones): add deployment steps for exercises	🟠 Media
-c2bf98b	22/01 17:02	"Hola"	Ruido, 0 información	Contamina historial	chore: update project structure (o borrar)	🔴 Alta
-...	...	...	...	...	...	...
-Ejemplos "Antes → Después" (8 reescrituras)
+   
+   Timeline semanal:
+   | Día       | Commits | Archivos | Observación        |
+   |-----------|---------|----------|--------------------|  
+   | Lun 20/01 | 2       | DWCS/... | [Nota breve]       |
+   | Mar 21/01 | 3       | DWCC/... | [Nota breve]       |
+   
+   Tabla de commits (mínimo 10 de esta semana):
+   | Commit (link) | Fecha/hora | Mensaje actual | Diagnóstico | Problema | Mensaje propuesto (Conventional Commits) | Prioridad |
+   |---------------|------------|----------------|-------------|----------|------------------------------------------|-----------|  
+   | c22824d       | 22/01 17:05| "Update instrucciones.md" | Vago, no dice qué ni por qué | Dificulta búsqueda/rollback | docs(instrucciones): add deployment steps for exercises | 🟠 Media |
+   
+   Ejemplos "Antes → Después" (mínimo 8 reescrituras):
+   
+   **Ejemplo 1: Mensaje genérico**
+   ```
+   ❌ MAL: "Update file"
+   ✅ BIEN: "fix(validation): correct DNI letter calculation logic"
+   
+   Por qué: El mensaje correcto especifica:
+   - Tipo de cambio (fix = corrección de bug)
+   - Scope (validation = área afectada)
+   - Qué se corrigió exactamente
+   ```
+
+3. REVISIÓN DE CÓDIGO (DWCC - JavaScript)
+   
+   Para cada archivo problemático, incluye sección así:
+   
+   ### Archivo: `ejercicios_4_1_problema1.html`
+   
+   **❌ PROBLEMA 1: Uso de `document.write`**
+   ```javascript
+   // Código actual (MAL)
+   document.write(a + " letra: " + b);
+   ```
+   
+   **Por qué es malo:**
+   - `document.write` sobrescribe todo el DOM si se ejecuta después de la carga
+   - No funciona en aplicaciones modernas (SPAs, frameworks)
+   - Viola principios de separación de contenido/presentación
+   
+   ```javascript
+   // ✅ Solución recomendada
+   const resultado = document.getElementById('resultado');
+   resultado.textContent = `${a} letra: ${b}`;
+   ```
+   
+   **❌ PROBLEMA 2: Naming conventions inconsistentes**
+   ```javascript
+   // Código actual (MAL)
+   function calculador_letra_dni(numero) { ... }
+   ```
+   
+   **Por qué es malo:**
+   - JavaScript usa camelCase por convención (no snake_case)
+   - Dificulta lectura en equipos que siguen estándares
+   
+   ```javascript
+   // ✅ Solución
+   function calcularLetraDni(numero) { ... }
+   ```
+
+4. REVISIÓN DE CÓDIGO (DWCS - PHP)
+   
+   ### Archivo: `Recurso.php`
+   
+   **❌ PROBLEMA 1: Falta strict types**
+   ```php
+   <?php
+   // Código actual (MAL)
+   abstract class Recurso {
+       protected string $titulo;
+   }
+   ```
+   
+   **Por qué es malo:**
+   - Sin `declare(strict_types=1)`, PHP permite coerción de tipos implícita
+   - Puede causar bugs difíciles de detectar
+   
+   ```php
+   <?php
+   // ✅ Solución
+   declare(strict_types=1);
+   
+   abstract class Recurso {
+       protected string $titulo;
+   }
+   ```
+   
+   **❌ PROBLEMA 2: Strings mágicos en lugar de constantes**
+   ```php
+   // Código actual (MAL) - Libro.php
+   public function getTipo(): string {
+       return "Libro";
+   }
+   ```
+   
+   **Por qué es malo:**
+   - Los strings "mágicos" causan errores de tipeo
+   - Dificulta refactoring y búsquedas
+   
+   ```php
+   // ✅ Solución
+   abstract class Recurso {
+       protected const TIPO = ''; // Forzar a definir en cada hijo
+       
+       public function getTipo(): string {
+           return static::TIPO;
+       }
+   }
+   
+   class Libro extends Recurso {
+       protected const TIPO = 'Libro';
+   }
+   ```
+
+5. REVISIÓN DE CÓDIGO (JavaScript - Variables y Scope)
+   
+   ### Archivo: `Ejercicio_8.html`
+   
+   **❌ PROBLEMA 1: Uso de `var` (obsoleto)**
+   ```javascript
+   // Código actual (MAL)
+   var n_filas = 30;
+   var n_asientos = 6;
+   ```
+   
+   **Por qué es malo:**
+   - `var` tiene function scope (no block scope)
+   - Permite redeclaración accidental
+   - Hoisting confuso
+   
+   ```javascript
+   // ✅ Solución
+   const N_FILAS = 30;      // Si no cambia
+   let nAsientos = 6;        // Si puede cambiar
+   ```
+   
+   **❌ PROBLEMA 2: Variables implícitas (sin declarar)**
+   ```javascript
+   // Código actual (MAL)
+   for (i = 0; i <= filas; i++) {  // 'i' se vuelve global!
+       for (j = 0; j <= asientos; j++) {
+   ```
+   
+   **Por qué es malo:**
+   - Crea variables globales accidentalmente
+   - Causa bugs si otro código usa `i` o `j`
+   - Falla en strict mode
+   
+   ```javascript
+   // ✅ Solución
+   for (let i = 0; i <= filas; i++) {
+       for (let j = 0; j <= asientos; j++) {
+   ```
+   
+   **❌ PROBLEMA 3: Constructor Array obsoleto**
+   ```javascript
+   // Código actual (MAL)
+   var tmp_fila = new Array();
+   ```
+   
+   **Por qué es malo:**
+   - Menos legible
+   - Comportamiento confuso con un solo argumento numérico
+   
+   ```javascript
+   // ✅ Solución
+   const tmpFila = []; // O const tmpFila = Array.from(...)
+   ```
+
+6. ESTRUCTURA DEL REPOSITORIO
+   
+   **❌ PROBLEMA 1: Nombres de carpetas con espacios**
+   ```
+   Actual (MAL):
+   DWCS/Segunda Evaluación/Unidad 4 - POO y Symfony/
+   ```
+   
+   **Por qué es malo:**
+   - Rompe scripts de terminal (requiere escapar espacios)
+   - URLs feas: %20Segunda%20Evaluaci%C3%B3n
+   - Problemas en CI/CD
+   
+   ```
+   ✅ Solución:
+   DWCS/segunda-evaluacion/unidad-4-poo-symfony/
+   ```
+   
+   **❌ PROBLEMA 2: Falta .gitignore adecuado**
+   ```
+   Crear en la raíz:
+   
+   # .gitignore
+   # IDEs
+   .vscode/
+   .idea/
+   *.swp
+   
+   # OS
+   .DS_Store
+   Thumbs.db
+   
+   # Dependencias
+   node_modules/
+   vendor/
+   
+   # Archivos temporales
+   *.log
+   *.tmp
+   ```
+
+7. RECOMENDACIONES FINALES
+   
+   Prioriza estas acciones:
+   
+   1. **Git (1-2 horas):**
+      - Estudia Conventional Commits: https://www.conventionalcommits.org/
+      - Practica reescribir 10 mensajes antiguos (ejercicio mental)
+   
+   2. **JavaScript (3-4 horas):**
+      - Migra todo `var` a `const`/`let`
+      - Elimina `document.write`, usa DOM moderno
+      - Aplica camelCase consistente
+   
+   3. **PHP (2-3 horas):**
+      - Añade `declare(strict_types=1)` a todos los archivos
+      - Reemplaza strings mágicos por constantes
+      - Configura autoload PSR-4
+   
+   4. **Estructura (1 hora):**
+      - Renombra carpetas (sin espacios)
+      - Crea .gitignore completo
+      - Añade README.md con instrucciones de setup
+
+📚 RECURSOS EDUCATIVOS
+Incluye al final links a:
+- Conventional Commits guide
+- Modern JavaScript best practices (MDN)
+- PSR-12 coding style (PHP-FIG)
+- Clean Code principles
