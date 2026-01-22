@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    
+    <script>
+
+        const letrasDNI = [
+            'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F',
+            'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S',
+            'Q', 'V', 'H', 'L', 'C', 'K', 'E'
+        ];
+
+        function calculador_letra_dni(numero) {
+            if (!isNaN(Number(numero))) {
+                return letrasDNI[(numero % 23)];
+            }
+            else {
+                return "No has introducido un valor válido!."
+            }
+        }
+
+        let a = 49511739;
+        let b = calculador_letra_dni(a);
+        document.write(a + " letra: " + b);
+
+
+    </script>
+
+</body>
+</html>
