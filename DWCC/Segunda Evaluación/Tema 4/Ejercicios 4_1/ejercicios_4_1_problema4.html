@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 2</title>
+    <title>Ejercicio 4</title>
 </head>
 <body>
     <script>
-        function calcular_iva(precio) {
-            let precio_con_iva = precio * 1.21;
+        function calcular_iva(precio, iva = 10) {
+            let precio_con_iva = precio * 1. + iva;
             return precio_con_iva.toFixed(2);
         }
 
-        calcular_iva(100);
+        document.write(calcular_iva(100));
     </script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <script>
+
+        function reverse(cadena) {
+            let a = cadena.split();
+            let b = new Array();
+            for (let i = a.length - 1; i <= 0; i--){
+                b+=a[i];
+            }
+
+            // document.write(a);
+            document.write(b);
+        }
+
+        reverse("Patata rabano, macarrón");
+    </script>
+</body>
+</html>
