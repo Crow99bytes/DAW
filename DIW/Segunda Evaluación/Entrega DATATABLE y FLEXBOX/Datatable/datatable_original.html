@@ -17,7 +17,7 @@
 </head>
 <body>
 
-    <table id="myTable" class="display">
+    <table id="myTable" class="compact row-border column-border">
         <thead>
         <tr>
         <th>Nombre</th>
@@ -138,7 +138,11 @@
 
   <script>
     var tabla = new DataTable('#myTable' , {
-        order: [[2, 'asc']]
+        order: [[2, 'asc']],
+        language : {
+          search : " Vendo Seat León _INPUT_ Busca aqui mendrugo"
+        },
+        lengthMenu: [10, 25, 50, -1]
         
     });
   </script>
