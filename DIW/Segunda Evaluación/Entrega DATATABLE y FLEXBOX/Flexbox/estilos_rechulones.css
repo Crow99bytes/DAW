@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- NAV ---------- */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: tomato;
+    padding: 10px;
+}
+
+.botones_navegacion {
+    width: 90px;
+    height: 40px;
+    background-color: peachpuff;
+}
+
+/* ---------- CONTENEDOR CENTRAL ---------- */
+.contenedor_central {
+    display: flex;
+    min-height: 400px;
+}
+
+/* ASIDE */
+aside {
+    flex-grow: 1;
+    background-color: honeydew;
+    padding: 10px;
+}
+
+.botones_laterales {
+    height: 50px;
+    background-color: palegreen;
+    margin-bottom: 10px;
+}
+
+/* MAIN */
+main {
+    flex-grow: 4;
+    background-color: linen;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Artículos grandes */
+.articulos_grandes {
+    flex-grow: 1;
+    width: calc(50% - 10px);
+    min-height: 160px;
+    background-color: lightsalmon;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Artículos pequeños */
+.articulos_peques {
+    flex-grow: 1;
+    width: calc(33.33% - 10px);
+    min-height: 120px;
+    background-color: moccasin;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    display: flex;
+    justify-content: flex-end; /* a la derecha */
+    align-items: center;       /* centrado vertical */
+    background-color: sienna;
+    height: 80px;
+    padding-right: 20px;
+}
+
+/* Botones del footer */
+.redes {
+    width: 50px;
+    height: 50px;
+    background-color: wheat;
+    margin-left: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
