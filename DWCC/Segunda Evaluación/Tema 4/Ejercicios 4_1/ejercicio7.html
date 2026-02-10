@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    
+    <script>
+
+        // Este ejercicio es el ejercicio 6 pero con la vuelta de tuerca de tener que almacenar
+        // los carácteres que almacenan el texto en variables y modificarlas según condición.
+
+        var texto = "Este texto es especial (por que salen cosas ocultas) <pero aún más secretas>"; 
+
+        function conversorTextoArray(string) {
+            return string.slice();
+        }
+
+
+        function detectorTexto(texto, opcion = 1) {
+            let resultado = "";
+            let texto_converso = conversorTextoArray(texto);
+
+            let elemento_contenedor_inicio = "(";
+            let elemento_contenedor_fin = ")";
+
+            if (opcion === 2) {
+                elemento_contenedor_inicio = "<";
+                elemento_contenedor_fin = ">";
+            }
+
+            let banderilla = false;
+            for (i = 0; i < texto_converso.length; i++) {
+
+                if (banderilla && texto_converso[i] != elemento_contenedor_fin) {
+                    resultado += texto_converso[i];
+                }
+
+                if (texto_converso[i] == elemento_contenedor_inicio) banderilla = true;
+                if (texto_converso[i] == elemento_contenedor_fin) {
+                    
+                } 
+
+            }
+            return resultado;
+        }           
+
+        document.write(`Este es el texto original → ${texto} <br>`);
+
+        document.write(`Este es el resultado → <b>${detectorTexto(texto, 2)}</b>`);
+
+
+    </script>
+
+</body>
+</html>

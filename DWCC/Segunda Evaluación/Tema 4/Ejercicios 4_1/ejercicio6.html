@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+
+    <script>
+        var texto_original = "Hola muy buenas tardes (sólo deberías ser capaz de leer esto) hoy es martes 10 ( y este texto también)";
+        
+
+
+        function conversorTextoArray(string) {
+            return string.slice();
+        }
+
+
+        function detectorTextoParentesis(texto) {
+            let resultado = "";
+            let texto_converso = conversorTextoArray(texto);
+
+            let banderilla = false;
+            for (i = 0; i < texto_converso.length; i++) {
+
+                if (banderilla && texto_converso[i] != ")") {
+                    resultado += texto_converso[i];
+                }
+
+                if (texto_converso[i] == "(") banderilla = true;
+                if (texto_converso[i] == ")") banderilla = false;
+
+            }
+            return resultado;
+        }           
+
+        document.write(`Este es el texto original → ${texto_original} <br>`);
+
+        document.write(`Este es el resultado → <b>${detectorTextoParentesis(texto_original)}</b>`);
+
+        
+    </script>
+    
+</body>
+</html>
