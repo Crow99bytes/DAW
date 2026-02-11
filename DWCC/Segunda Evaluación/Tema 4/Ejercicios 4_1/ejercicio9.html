@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+
+    <script>
+        /* →Si es la opción 1 necesito conseguir los siguientes datos:
+            - Número del día de la semana.
+            - Número de mes.
+            - Año 
+            
+           → Si es la opción 2 necesito:
+            - Número del día del mes.
+            - Número de mes.
+            - Año.
+            - Hora:
+                - hora
+                - minuto */
+
+
+        var este_mismo_instante = new Date();
+        const DIAS_DE_LA_SEMANA = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+        const MESES = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+        function formateadorFechaObjetoDate(objeto_date, modo = 1){
+
+            // En ambos casos necesitamos día, mes y año.
+            let dia = objeto_date.getDate();
+            let mes = objeto_date.getMonth() + 1;
+            let year = objeto_date.getFullYear();
+
+            // Especificos de cada:
+            // Opción 1:
+            if (modo === 1) {
+                let n_dia = objeto_date.getDay();
+                let dia_semana = DIAS_DE_LA_SEMANA[n_dia];
+                let nombre_mes = MESES[mes];
+
+                return `${dia_semana}, ${dia} de ${nombre_mes} de ${year}`;
+            }
+
+            if (modo === 2) {
+                let hora = objeto_date.getHours();
+                let mins = objeto_date.getMinutes();
+
+                return `${dia} / ${mes} / ${year} ${hora}:${mins}h`;
+            }
+            
+            
+            
+        }
+        document.write(formateadorFechaObjetoDate(este_mismo_instante));
+        document.write("<br>");
+        document.write(formateadorFechaObjetoDate(este_mismo_instante, 2));
+
+
+    </script>
+    
+</body>
+</html>

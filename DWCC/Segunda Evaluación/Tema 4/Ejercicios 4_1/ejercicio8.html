@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+    
+    <script>
+
+        /* Crea una función que genere número entero aleatorio entre min y max, que serán pasados como
+        parámetros. Por defecto min = 1 y max = 100. Podrás utilizar esta función en los siguientes ejercicios. */
+
+        function generadorMinMax(min = 1, max = 100) {
+            return Math.floor(Math.random() * (max - min + 1) + min);            
+        }
+
+        document.write(`
+        
+            Número entre 100 y 1000 → <b>${generadorMinMax(100, 1000)}</b> <br>
+            Número entre 1 y 5 → <b>${generadorMinMax(1,5)}</b>
+        
+        `);
+
+
+    </script>
+
+</body>
+</html>
