@@ -1,0 +1,22 @@
+{
+    "name": "app/biblioteca",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "manueld99",
+            "email": "manueld200sx@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
