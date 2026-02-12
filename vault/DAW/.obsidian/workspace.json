@@ -4,20 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "c454c4e3e82420ec",
+        "id": "4509724f8bf84da7",
         "type": "tabs",
         "children": [
           {
-            "id": "ce6c0e9ede046a06",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
               "type": "canvas",
               "state": {
                 "file": "Bootstrap.canvas",
                 "viewState": {
-                  "x": 4.343605991473964,
-                  "y": 36.50893507763302,
-                  "zoom": 0.6666666666666665
+                  "x": -70,
+                  "y": 98,
+                  "zoom": -0.07886185584136743
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -185,11 +185,11 @@
       "iconic:Open rulebook": false
     }
   },
-  "active": "ce6c0e9ede046a06",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Bootstrap.canvas",
     "Pasted image 20260212194433.png",
     "Pasted image 20260212194334.png",
-    "Bootstrap.canvas",
     "99 - Notas/2025/16-12-2025.md",
     "1 - Formación/1.2 - Desarrollo de Aplicaciones Web/year_2/DWCS - Desarrollo de Aplicaciones Web en Entorno Servidor/1 - Ev/Preparación Recuperación/Perplexity - Guía Aprobar UD3.md",
     "1 - Formación/1.2 - Desarrollo de Aplicaciones Web/year_2/DWCS - Desarrollo de Aplicaciones Web en Entorno Servidor/1 - Ev/DWCS 1EV Notas.md",
