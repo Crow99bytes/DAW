@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11</title>
+</head>
+<body>
+    <script>
+
+        document.write(passwordGeneratorPro(48));
+        function passwordGeneratorPro(longitud = 8) {
+            const ELEMENTOS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            let clave = "";
+
+            for (let i = 0; i < longitud; i++) {
+                let result = Math.floor(Math.random() * ELEMENTOS.length);
+                clave += ELEMENTOS[result];
+            }
+
+            return clave;
+
+        }
+
+    </script>
+</body>
+</html>

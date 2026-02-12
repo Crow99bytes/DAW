@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+</head>
+<body>
+
+    <script>
+        almacenador();
+
+
+        function generadorMinMax(min = 1, max = 1000) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        function almacenador() {
+            var numeros_almacenados = new Array();
+
+            while (numeros_almacenados.length < 100) {
+                let n = generadorMinMax(1, 1000);
+                if (!numeros_almacenados.includes(n)) numeros_almacenados.push(n);
+            }
+
+            numeros_almacenados.sort((a,b) => a - b);
+            document.write(numeros_almacenados.join(" | "));        
+        }
+
+    </script>
+    
+</body>
+</html>
