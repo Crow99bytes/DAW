@@ -1,0 +1,9 @@
+{
+  "accentColor": "#ff0000",
+  "theme": "obsidian",
+  "nativeMenus": false,
+  "enabledCssSnippets": [
+    "print-fix"
+  ],
+  "showRibbon": true
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 16</title>
+</head>
+<body>
+    <script>
+
+        var primerArray = new Array();
+        var secondArray = new Array();
+        var thirdArray = new Array();
+
+        // Aquí empezamos a llenar los 2 arrays.
+        rellenadorArraysNumerico(primerArray);
+        rellenadorArraysNumerico(secondArray);
+
+        mixerArrays(primerArray, secondArray, thirdArray);
+        document.write(`Primer array: ${primerArray}</br>
+                        Segundo array: ${secondArray}</br></br>
+                        Array mezclado: ${thirdArray}
+        `);
+        
+        /* Esta función recibe un array y lo rellena de una cantidad concreta
+            de números aleatorios y los devuelve ordenados. */
+        function rellenadorArraysNumerico(lista, largo = 10) {
+            while (lista.length < largo) {
+                lista.push(Math.floor(Math.random() * 100));
+            }
+            document.write(lista.sort((a, b) => a - b) + "</br></br>");
+            return lista.sort((a, b) => a - b);
+        }
+
+        function mixerArrays(l1, l2, l3) {
+            while (i < l1.length && j < l2.length) {
+                let i = 0;
+                let j = 0;
+                let limitel1 = l1.length - 1;
+
+                if (l1[i] < l2[j]) {
+                    l3.push(l1[i]);
+                    i++;
+                    
+                }
+
+                else if (l1[i] > l2[j]) {
+                    l3.push(l2[j]);
+                    j++;
+                }
+                else {
+                    l3.push(l1[i], l2[j]);
+                }
+                
+            }
+
+        }
+
+
+
+        
+
+        
+        
+
+
+    </script>
+</body>
+</html>

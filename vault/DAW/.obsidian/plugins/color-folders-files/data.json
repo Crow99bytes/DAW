@@ -1,0 +1,331 @@
+{
+  "styles": {
+    "DAW/DAW": {
+      "backgroundColor": "#c65cff",
+      "textColor": "#000000",
+      "isBold": true,
+      "applyToSubfolders": true,
+      "applyToFiles": true
+    },
+    "DAW/DWCS (Php)": {
+      "backgroundColor": "#f64c4c",
+      "textColor": "#000000",
+      "isBold": true,
+      "applyToFiles": true,
+      "applyToSubfolders": true
+    },
+    "DAW/DIW": {
+      "backgroundColor": "#5edfe8",
+      "textColor": "#000000",
+      "isBold": true,
+      "isItalic": false,
+      "applyToSubfolders": true,
+      "applyToFiles": true
+    },
+    "DAW/DWCC (JavaScript)": {
+      "backgroundColor": "#c2ff66",
+      "textColor": "#000000",
+      "isBold": true,
+      "applyToSubfolders": true,
+      "applyToFiles": true
+    },
+    "DAW": {
+      "isBold": true,
+      "backgroundColor": "#ffffff",
+      "textColor": "#000000"
+    },
+    "librería": {
+      "backgroundColor": "#ffffff",
+      "textColor": "#000000",
+      "isBold": true
+    },
+    "librería/lenguajes de programación": {
+      "backgroundColor": "#f2ad36",
+      "textColor": "#000000",
+      "isBold": true,
+      "applyToSubfolders": true,
+      "applyToFiles": true
+    },
+    "Notas": {
+      "backgroundColor": "#ffffff",
+      "textColor": "#000000",
+      "isBold": true,
+      "applyToSubfolders": false,
+      "applyToFiles": false
+    },
+    "Utilidades": {
+      "backgroundColor": "#ffffff",
+      "textColor": "#000000",
+      "isBold": true,
+      "applyToSubfolders": true,
+      "applyToFiles": true
+    },
+    "Cursos": {
+      "backgroundColor": "#ffffff",
+      "textColor": "#000000",
+      "isBold": true
+    },
+    "Cursos/JSCamp - midudev": {
+      "backgroundColor": "#fd4e4e",
+      "textColor": "#000000",
+      "isBold": true,
+      "applyToFiles": true,
+      "applyToSubfolders": true
+    },
+    "Notas/2025": {
+      "backgroundColor": "#85edff",
+      "textColor": "#000000",
+      "isBold": true,
+      "isItalic": false
+    },
+    "Notas/2025/Septiembre": {
+      "backgroundColor": "#ff7070",
+      "isBold": true,
+      "textColor": "#000000",
+      "applyToFiles": true,
+      "applyToSubfolders": true
+    },
+    "Notas/2025/Octubre": {
+      "backgroundColor": "#ff66b0",
+      "textColor": "#000000",
+      "isBold": true,
+      "applyToSubfolders": true,
+      "applyToFiles": true
+    },
+    "Utilidades/Información IA": {
+      "backgroundColor": "#000000",
+      "textColor": "#ffffff",
+      "isBold": true,
+      "applyToSubfolders": true,
+      "applyToFiles": true
+    },
+    "Utilidades/Homepages": {
+      "backgroundColor": "#000000",
+      "textColor": "#ffffff",
+      "isBold": true,
+      "applyToSubfolders": true,
+      "applyToFiles": true
+    },
+    "DAW/DWCC (JavaScript)/1ªEvaluación/UD2/PDFs": {
+      "backgroundColor": "#7ca046",
+      "applyToSubfolders": true,
+      "applyToFiles": true
+    },
+    "DAW/DWCS (Php)/1ªEvaluacion/UD2/Código": {
+      "backgroundColor": "#000000",
+      "textColor": "#ffffff",
+      "isBold": true
+    },
+    "NEW": {
+      "backgroundColor": "#ffffff",
+      "textColor": "#000000",
+      "isBold": true,
+      "applyToFiles": true,
+      "applyToSubfolders": true
+    },
+    "NEW/1 - Formación/Desarrollo de Aplicaciones Web/year_2": {
+      "backgroundColor": "#336c6b",
+      "textColor": "#ffffff",
+      "isBold": true
+    },
+    "NEW/1 - Formación/Desarrollo de Aplicaciones Web/year_1": {
+      "backgroundColor": "#854242",
+      "textColor": "#ffffff",
+      "isBold": true
+    },
+    "NEW/1 - Formación/Desarrollo de Aplicaciones Web/year_2/DAW - Despliegue de Aplicaciones Web": {
+      "backgroundColor": "#9550c3",
+      "isBold": true,
+      "textColor": "#ffffff"
+    },
+    "NEW/1 - Formación/Desarrollo de Aplicaciones Web/year_2/DIW - Diseño de Aplicaciones Web": {
+      "backgroundColor": "#526589",
+      "isBold": true,
+      "textColor": "#ffffff"
+    },
+    "NEW/1 - Formación/Desarrollo de Aplicaciones Web/year_2/DWCC - Desarrollo de Aplicaciones Web en Entorno Cliente": {
+      "backgroundColor": "#4d8060",
+      "textColor": "#ffffff",
+      "isBold": true
+    },
+    "NEW/1 - Formación/Desarrollo de Aplicaciones Web/year_2/DWCS - Desarrollo de Aplicaciones Web en Entorno Servidor": {
+      "backgroundColor": "#a1764f",
+      "textColor": "#ffffff",
+      "isBold": true
+    },
+    "0 - Indice": {
+      "backgroundColor": "#9d3939",
+      "textColor": "#ffffff",
+      "isBold": true,
+      "applyToSubfolders": true
+    },
+    "1 - Formación": {
+      "backgroundColor": "#862d53",
+      "textColor": "#ffffff",
+      "isBold": true,
+      "applyToSubfolders": true
+    },
+    "2 - Librería": {
+      "backgroundColor": "#464aa4",
+      "textColor": "#ffffff",
+      "isBold": true
+    },
+    "97 - Imágenes Repositorio": {
+      "backgroundColor": "#575757",
+      "textColor": "#ffffff",
+      "isBold": false,
+      "isItalic": true,
+      "opacity": 0.5,
+      "applyToSubfolders": true,
+      "applyToFiles": false
+    },
+    "98 - Utilidades": {
+      "backgroundColor": "#575757",
+      "textColor": "#ffffff",
+      "isBold": false,
+      "isItalic": true,
+      "opacity": 0.5,
+      "applyToSubfolders": true,
+      "applyToFiles": false
+    },
+    "99 - Notas": {
+      "textColor": "#000000",
+      "applyToSubfolders": true,
+      "isBold": true,
+      "isItalic": false,
+      "backgroundColor": "#ffffff"
+    },
+    "1 - Formación/1.2 - Desarrollo de Aplicaciones Web": {
+      "backgroundColor": "#4d1a30",
+      "textColor": "#ffffff",
+      "isBold": true,
+      "applyToSubfolders": false,
+      "opacity": 1,
+      "applyToFiles": false
+    },
+    "1 - Formación/1.2 - Desarrollo de Aplicaciones Web/year_2/DAW - Despliegue de Aplicaciones Web": {
+      "backgroundColor": "#00ff91",
+      "textColor": "#000000",
+      "isBold": true,
+      "applyToSubfolders": true,
+      "isItalic": true
+    },
+    "1 - Formación/1.2 - Desarrollo de Aplicaciones Web/year_2/DIW - Diseño de Aplicaciones Web": {
+      "backgroundColor": "#fff700",
+      "isBold": true,
+      "textColor": "#000000",
+      "applyToSubfolders": true,
+      "isItalic": true
+    },
+    "1 - Formación/1.2 - Desarrollo de Aplicaciones Web/year_2/DWCC - Desarrollo de Aplicaciones Web en Entorno Cliente": {
+      "backgroundColor": "#04ff00",
+      "textColor": "#000000",
+      "isBold": true,
+      "isItalic": true,
+      "applyToSubfolders": true
+    },
+    "1 - Formación/1.2 - Desarrollo de Aplicaciones Web/year_2/DWCS - Desarrollo de Aplicaciones Web en Entorno Servidor": {
+      "applyToSubfolders": true,
+      "isBold": true,
+      "isItalic": true,
+      "backgroundColor": "#ffae00",
+      "textColor": "#000000"
+    },
+    "1 - Formación/1.2 - Desarrollo de Aplicaciones Web/0_Plantillas": {
+      "backgroundColor": "#575757",
+      "textColor": "#ffffff",
+      "isBold": false,
+      "isItalic": true,
+      "opacity": 0.5,
+      "applyToSubfolders": true,
+      "applyToFiles": false
+    },
+    "1 - Formación/1.2 - Desarrollo de Aplicaciones Web/year_1": {
+      "backgroundColor": "#000000",
+      "textColor": "#ffffff",
+      "isBold": true
+    },
+    "1 - Formación/1.2 - Desarrollo de Aplicaciones Web/year_2": {
+      "backgroundColor": "#ffffff",
+      "textColor": "#000000",
+      "isBold": true
+    },
+    "1 - Formación/1.2 - Desarrollo de Aplicaciones Web/year_2/DWCC - Desarrollo de Aplicaciones Web en Entorno Cliente/0 - General": {
+      "backgroundColor": "#2fa92d",
+      "textColor": "#000000",
+      "isBold": true,
+      "isItalic": true,
+      "applyToSubfolders": true,
+      "opacity": 1
+    },
+    "1 - Formación/1.2 - Desarrollo de Aplicaciones Web/year_2/DWCC - Desarrollo de Aplicaciones Web en Entorno Cliente/1 - Ev": {
+      "backgroundColor": "#2fa92d",
+      "textColor": "#000000",
+      "isBold": true,
+      "isItalic": true,
+      "applyToSubfolders": true,
+      "opacity": 1
+    },
+    "1 - Formación/1.2 - Desarrollo de Aplicaciones Web/year_2/DWCC - Desarrollo de Aplicaciones Web en Entorno Cliente/2 - Ev": {
+      "backgroundColor": "#2fa92d",
+      "textColor": "#000000",
+      "isBold": true,
+      "isItalic": true,
+      "applyToSubfolders": true,
+      "opacity": 1
+    },
+    "1 - Formación/1.2 - Desarrollo de Aplicaciones Web/year_2/DWCC - Desarrollo de Aplicaciones Web en Entorno Cliente/3 - Ev": {
+      "backgroundColor": "#2fa92d",
+      "textColor": "#000000",
+      "isBold": true,
+      "isItalic": true,
+      "applyToSubfolders": true,
+      "opacity": 1
+    },
+    "3 - Organización": {
+      "backgroundColor": "#379730",
+      "textColor": "#ffffff",
+      "isBold": true
+    }
+  },
+  "presets": {
+    "Utils": {
+      "backgroundColor": "#575757",
+      "textColor": "#ffffff",
+      "isBold": false,
+      "isItalic": true,
+      "opacity": 0.5,
+      "applyToSubfolders": true,
+      "applyToFiles": false
+    },
+    "A": {
+      "backgroundColor": "#575757",
+      "textColor": "#ffffff",
+      "isBold": false,
+      "isItalic": true,
+      "opacity": 0.5,
+      "applyToSubfolders": true,
+      "applyToFiles": false
+    },
+    "Formacion": {
+      "backgroundColor": "#862d53",
+      "textColor": "#ffffff",
+      "isBold": true,
+      "applyToSubfolders": true
+    },
+    "DWCC": {
+      "backgroundColor": "#2fa92d",
+      "textColor": "#000000",
+      "isBold": true,
+      "isItalic": true,
+      "applyToSubfolders": true,
+      "opacity": 1
+    }
+  },
+  "presetOrder": [
+    "Utils",
+    "A",
+    "Formacion",
+    "DWCC"
+  ]
+}

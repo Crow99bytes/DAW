@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13</title>
+</head>
+<body>
+
+    <script>
+
+        var texto = "Jose (luis(aragon)y)seijo";
+        var texto_mal = "Jose ( luis )) aragon y (( seijo )";
+
+        function procesadorParentesis(cadena) {
+            let contenedor = new Array();
+            let cadenaConvertidaArray = cadena.split("");
+            for (i = 0; i < cadenaConvertidaArray.length; i++) {
+                if (cadenaConvertidaArray[i] == "(") contenedor.push("(");
+                if (cadenaConvertidaArray[i] == ")") contenedor.pop("(");
+            }
+
+            if (contenedor.length === 0) return true;
+            return false;
+        }
+
+        document.write(procesadorParentesis(texto)+"</br>");
+        document.write(procesadorParentesis(texto_mal)+"</br>");
+
+    </script>
+    
+</body>
+</html>

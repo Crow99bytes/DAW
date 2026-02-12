@@ -1,0 +1,33 @@
+/* Exportar PDF en formato A4 con márgenes estándar */
+@media print {
+  body {
+    margin: 0 !important;       /* Eliminar márgenes que pone Obsidian */
+    line-height: 1.5;
+    font-size: 12pt;
+  }
+
+  /* Márgenes estilo Word: 2.54 cm */
+  @page {
+    size: A4;
+    margin-top: 2.54cm;
+    margin-bottom: 2.54cm;
+    margin-left: 2.54cm;
+    margin-right: 2.54cm;
+
+    /* Numeración de página centrada abajo */
+    @bottom-center {
+      content: counter(page);
+      font-size: 10pt;
+      color: #444;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  p, ul, ol, table, pre, blockquote, img {
+    page-break-inside: avoid;
+  }
+}

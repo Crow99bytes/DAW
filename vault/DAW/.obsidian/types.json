@@ -1,0 +1,10 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "Relaciones": "multitext",
+    "enlaces": "multitext",
+    "Documentos": "multitext"
+  }
+}
