@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+
+    <script>
+
+        function devolverContenidoEntreParentesis(cadena) {
+            let newCadena = cadena.split("");
+            let resultado = "";
+
+            // Si tiene un parentesis inicial o no.
+            if (newCadena.includes("(")) {
+                let add = false;
+                for (let i = 0; i < newCadena.length ; i++) {
+                    if (newCadena[i] == "(") {
+                        add = true;
+                        continue;
+                    }
+                    if (newCadena[i] == ")") {
+                        add = false;
+                        continue;
+                    }
+                    if (add && newCadena[i] !== "(" && newCadena[i] !== ")") resultado += newCadena[i];
+
+                }
+            }
+
+            // Si no tiene un paréntesis inicial!
+            if (newCadena.includes(")") && !newCadena.includes("(")) {
+                for (let i = 0; i < newCadena.length ; i++) {
+                    add = true;
+                    }
+                    if (newCadena[i] == ")") {
+                        resultado += newCadena[i];
+                        add = false;
+                    }
+                    if (add) resultado += newCadena[i];
+
+                }
+            }
+        
+
+    </script>
+    
+</body>
+</html>
