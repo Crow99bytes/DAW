@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 18</title>
+</head>
+<body>
+    <script>
+        analizadorDeString();
+
+
+        // Función principal:
+        function analizadorDeString(){
+            let textoConversoArray = receptorCadenaUser();
+            let palabrasPrimeraUltima = primeraYUltimaPalabra(textoConversoArray);
+            let resultado = `La cadena: ${textoConversoArray} tiene:</br>
+            - ${wordCounter(textoConversoArray)} palabras.</br>
+            - La primera palabra es: ${palabrasPrimeraUltima[0]}</br>
+            - La última palabra es: ${palabrasPrimeraUltima[1]}</br>
+            - Ordenada alfabéticamente: ${ordenadorDeArray(textoConversoArray, 1)}</br>
+            - Ordenada inversa alfabéticamente: ${ordenadorDeArray(textoConversoArray, 2)}</br>
+            - El array todo en mayúsculas: ${textArrayToMayus(textoConversoArray)}`;
+            
+            document.write(resultado)
+        }
+
+        /* Función que recoge el input del usuario
+            y lo devuelve como un array que se divide
+            por los espacios. */
+        function receptorCadenaUser(){
+            let texto = prompt("Introduce una cadena de texto: ");
+            let textoConversoArray = texto.split(" ");
+            return textoConversoArray;
+        }
+
+        // Función sencilla que devuelve el número de elementos del array.
+        function wordCounter(textArray){
+            return textArray.length;
+        }
+
+        // Función que devuelve la primera y última palabra del array
+        // Devuelve posición 0 y -1 vaya.
+        function primeraYUltimaPalabra(textArray) {
+            let primera_ultima = [textArray[0], textArray[textArray.length - 1]];
+            return primera_ultima;
+        }
+
+        /* Función que devuelve un array ordenado alfabéticamente o
+        al revés según se le indique en la llamada. */
+
+        function ordenadorDeArray(textArray, orden) {
+            let copia = [...textArray];
+            if (orden === 1) return copia.sort();
+            else if (orden === 2) return copia.sort().reverse();
+            else return "1 o 2 meu, escoge bien!";
+        }
+
+        /* Función que recibe un array de textos
+            y devuelve una copia en mayúsculas. */
+        function textArrayToMayus(textArray){
+            for (let i = 0; i < textArray.length; i++) {
+                textArray[i] = textArray[i].toUpperCase();
+                
+            }
+            return textArray;
+        }
+    </script>
+</body>
+</html>

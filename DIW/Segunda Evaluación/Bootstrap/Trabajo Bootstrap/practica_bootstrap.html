@@ -1,36 +1,239 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Práctica de Bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mini Netflix - Placeholders</title>
 
-    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.css">
-    
-    
+  <!-- Bootstrap 5 CSS: carga el framework completo de estilos -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* ── Página principal ─────────────────────────────────────────── */
+
+    /* Fondo negro total como Netflix */
+    body {
+      background-color: #141414;
+      color: #ffffff;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    /* ── Barra superior tipo Netflix ─────────────────────────────── */
+
+    .navbar-custom {
+      background-color: #000000;
+      padding: 14px 30px;
+      border-bottom: 2px solid #e50914; /* línea roja de acento */
+    }
+
+    /* Logo "NETFAKE" en rojo, igual que Netflix */
+    .navbar-custom .logo {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #e50914;
+      letter-spacing: -1px;
+      text-decoration: none;
+    }
+
+    /* ── Tarjetas ─────────────────────────────────────────────────── */
+
+    /* La tarjeta base: sin borde, fondo oscuro, redondeo suave */
+    .movie-card {
+      background-color: #1f1f1f;
+      border: none;
+      border-radius: 8px;
+      overflow: hidden;         /* recorta los bordes de la imagen */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    /* Al pasar el ratón, la tarjeta sube y brilla */
+    .movie-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 12px 30px rgba(229, 9, 20, 0.35);
+    }
+
+    /* Espacio reservado para la "portada" de la película */
+    .card-poster {
+      width: 100%;
+      height: 260px;
+    }
+
+    /* El placeholder usa el color secundario de Bootstrap,
+       pero aquí lo sobreescribimos para que sea más oscuro */
+    .card-poster.placeholder {
+      background-color: #2d2d2d;
+    }
+
+    /* ── Cuerpo de la tarjeta ─────────────────────────────────────── */
+
+    .movie-card .card-body {
+      padding: 14px 16px 18px;
+    }
+
+    /* Título de la película */
+    .movie-card .card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    /* Placeholder del título: color grisáceo */
+    .movie-card .card-title .placeholder {
+      background-color: #3a3a3a;
+      border-radius: 4px;
+    }
+
+    /* Descripción corta */
+    .movie-card .card-text {
+      font-size: 0.82rem;
+      color: #aaaaaa;
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+
+    /* Placeholder del texto: igual de grisáceo */
+    .movie-card .card-text .placeholder {
+      background-color: #2d2d2d;
+      border-radius: 3px;
+    }
+
+    /* ── Botón "▶ Ver ahora" ─────────────────────────────────────── */
+
+    /* Placeholder del botón: mismo rojo de Netflix, desactivado */
+    .btn-play.placeholder {
+      background-color: #e50914;
+      border-radius: 4px;
+      height: 36px;
+      opacity: 0.7;
+    }
+
+    /* ── Título de sección ───────────────────────────────────────── */
+
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      padding-left: 4px;
+      border-left: 4px solid #e50914;  /* rayita roja a la izquierda */
+      padding-left: 12px;
+    }
+  </style>
 </head>
+
 <body>
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item active" aria-current="page">Home</li>
-  </ol>
-</nav>
 
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Library</li>
-  </ol>
-</nav>
+  <!-- ─── NAVBAR ─────────────────────────────────────────────────────
+       Barra negra en la parte superior con el logo tipo Netflix.
+  ─────────────────────────────────────────────────────────────────── -->
+  <nav class="navbar-custom d-flex align-items-center">
+    <a class="logo" href="#">NETFAKE</a>
+  </nav>
 
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item"><a href="#">Library</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Data</li>
-  </ol>
-</nav>
-    
-    <script rel="text/javascript" src="bootstrap-5.3.8-dist/js/bootstrap.js"></script>
+
+  <!-- ─── CONTENIDO PRINCIPAL ────────────────────────────────────────
+       container-xl: limita el ancho máximo y centra el contenido.
+       py-5: espacio vertical arriba y abajo.
+  ─────────────────────────────────────────────────────────────────── -->
+  <div class="container-xl py-5">
+
+    <h2 class="section-title">Populares ahora</h2>
+
+    <!-- row: fila del sistema grid de Bootstrap.
+         g-4: separación (gap) entre las columnas.
+         row-cols-1: en móvil, 1 tarjeta por fila.
+         row-cols-md-3: en tablet/PC, 3 tarjetas por fila. -->
+    <div class="row g-4 row-cols-1 row-cols-md-3">
+
+
+      <!-- ── TARJETA 1 ────────────────────────────────────────────── -->
+      <div class="col">
+        <div class="card movie-card">
+
+          <!-- PORTADA: placeholder-glow = animación de brillo suave
+               .placeholder ocupa todo el ancho (col-12)
+               .card-poster le da la altura de 260px que definimos arriba -->
+          <div class="placeholder-glow">
+            <span class="placeholder col-12 card-poster"></span>
+          </div>
+
+          <div class="card-body">
+
+            <!-- TÍTULO: placeholder de ~60% del ancho del contenedor -->
+            <h5 class="card-title placeholder-glow">
+              <span class="placeholder col-6"></span>
+            </h5>
+
+            <!-- DESCRIPCIÓN: dos líneas de ancho distinto
+                 para parecer texto real (truco visual) -->
+            <p class="card-text placeholder-glow">
+              <span class="placeholder col-8"></span>
+              <span class="placeholder col-5"></span>
+            </p>
+
+            <!-- BOTÓN: desactivado visualmente, actúa como placeholder
+                 col-7 = 7/12 del ancho del contenedor -->
+            <span class="btn-play placeholder col-7 d-block"></span>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ── TARJETA 2 ────────────────────────────────────────────── -->
+      <!-- Igual que la tarjeta 1 pero con anchos distintos
+           en los placeholders para que no parezcan copias exactas -->
+      <div class="col">
+        <div class="card movie-card">
+
+          <div class="placeholder-glow">
+            <span class="placeholder col-12 card-poster"></span>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title placeholder-glow">
+              <span class="placeholder col-8"></span>
+            </h5>
+            <p class="card-text placeholder-glow">
+              <span class="placeholder col-10"></span>
+              <span class="placeholder col-4"></span>
+            </p>
+            <span class="btn-play placeholder col-5 d-block"></span>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- ── TARJETA 3 ────────────────────────────────────────────── -->
+      <div class="col">
+        <div class="card movie-card">
+
+          <div class="placeholder-glow">
+            <span class="placeholder col-12 card-poster"></span>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title placeholder-glow">
+              <span class="placeholder col-7"></span>
+            </h5>
+            <p class="card-text placeholder-glow">
+              <span class="placeholder col-9"></span>
+              <span class="placeholder col-6"></span>
+            </p>
+            <span class="btn-play placeholder col-6 d-block"></span>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div><!-- /row -->
+  </div><!-- /container -->
+
+
+  <!-- Bootstrap JS: necesario para los componentes interactivos (modales, etc.) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

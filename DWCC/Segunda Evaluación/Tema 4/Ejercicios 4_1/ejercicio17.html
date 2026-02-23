@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Esto está sin terminar, tengo que terminarle el menú, pero
+     es lo menos importante realmente, el resto de las funciones
+     funcionan (eso sí, no checkean limites de que el usuario
+     pueda meter mal los datos) -->
+
+    <script>
+        const FILAS = 13;
+        const COLUMNAS = 20;
+        
+        var butacasSalaCine = creadorFilasyColumnas();
+        // mostrarMapaSala(butacasSalaCine);
+        // asignarButaca(1, 1,butacasSalaCine);
+        // asignarButaca(1, 1,butacasSalaCine);
+
+        // mostrarMapaSala(butacasSalaCine);
+
+        mostrarMapaSala(butacasSalaCine);
+        asignarButaca(1, 1, butacasSalaCine);
+        document.write("</br>")
+        asignarButaca(3,5, butacasSalaCine);
+        asignarButaca(3,5, butacasSalaCine);
+        mostrarMapaSala(butacasSalaCine);
+
+        function menu(){
+            let salaCine = creadorFilasyColumnas();
+            let option;
+            let salir = false;
+            let html = `Bienvenido al menú de tu cine de confianza (Sea cual sea)<br>`;
+            
+            document.write(html);
+            while (!salir) {
+                let option = 1;
+                
+                switch (option) {
+                    case 1:
+                        mostrarMapaSala(salaCine);
+                        salir = true;
+                        break;
+                    case 2:
+                        let asign_fila = prompt("Introduce la fila que deseas: ");
+                        let asign_butaca = prompt(`Introduce la butaca que desees de la fila ${asign_fila}`);
+                        asignarButaca(asign_fila, asign_butaca, salaCine);
+
+                        document.write("</br></br>Estado actual de la sala.</br>")
+                        mostrarMapaSala(salaCine);
+                        break;
+                    case 3:
+                        salir = true;
+                        break;
+
+                    default:
+                        salir = true;
+                        break;
+
+                    
+                }
+                
+            }
+        }
+        
+        function creadorFilasyColumnas () {
+            let listaExterior = [];
+            for (let i = 0; i < FILAS; i++){
+                listaInterior = [];
+                for(let j = 0; j < COLUMNAS; j++){
+                    listaInterior.push("🟢");
+                }
+                listaExterior.push(listaInterior);
+            }
+            return listaExterior;
+        }
+
+        function mostrarMapaSala(sala) {
+            let documento = "";
+            for (let i = 0; i < FILAS; i++){
+                documento += `Fila ${i} → ${sala[i]} </br>`;
+            }
+            document.write(documento);
+        }
+
+        function asignarButaca(fila, butaca, lista) {
+            if (checkButacaLibre(fila,butaca, lista)) {
+                lista[fila - 1][butaca - 1] = "🔴";
+                alert("Asiento asignado correctamente.");
+            }
+            else {
+                alert("Lugar ocupado, escoja uno de nuevo");
+                mostrarMapaSala(lista);
+                document.write("</br>");
+            }
+        }
+
+        function checkButacaLibre(fila, butaca, lista){
+            return lista[fila - 1][butaca - 1] === "🟢";
+        }
+
+        
+
+
+
+
+    
+    </script>
+    
+</body>
+</html>

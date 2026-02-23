@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 20 y 21</title>
+</head>
+<body>
+    <script>
+        /* Cosas que neceistamos para hacer este ejercicio:
+            1. Generar un array bidimensional de 8x8.
+                1.1 Alternar 0 y 1 para simular blancas y negras respectivamente.
+            2. Tener en cuenta que el rey blanco tiene el valor 1000.
+            3. Crear una función que cuente el número de casillas a las que se puede mover el rey:
+                3.1 Hace falta tener en cuenta los extremos, y las esquinas.
+            4. Hay que devolver el número de la casilla y la cantidad de casillas a las que se puede mover. (json?) */
+
+        // Constantes.
+        const N_MATRIZ = 8;
+
+        var tablero = generadorArrayBidimensional();
+        document.write(visualizarTablero(tablero)) ;
+
+
+        function generadorArrayBidimensional(N_MATRIZ, N_MATRIZ){
+            let cont = 0;
+            let arrayExterno = [];
+            for (let i = 0; i < alto; i++) {
+                let internoArray = [];
+                if (i % 2 != 0) cont--;
+                if (i % 2 === 0) cont++;
+                for (let j = 0; j < ancho; j++){
+
+
+                    if (cont % 2 === 0) asignacion = 0;
+                    else asignacion = 1;
+                    internoArray.push(asignacion);
+                    cont++;
+                }
+                arrayExterno.push(internoArray);
+            }
+            return arrayExterno;
+        }
+
+        function visualizarTablero(tablero){
+            let resultado = "";
+            for (let fila of tablero) {
+                resultado+=fila + "</br>";
+            }
+            return resultado;
+        }
+
+        function dame_posiciones_rey(tablero) {
+            /* Declaramos las variables que almacenarán la posición del rey */
+            let filaRey, columnaRey;
+
+            // Recorremos todo el array buscando el Rey y almacenamos en las variables esa posición.
+            for (let i = 0; i < N_MATRIZ; i++) {
+                for (let j = 0; j < N_MATRIZ; j++) {
+                    if (tablero[i][j] === 1000) {
+                        filaRey = i;
+                        columnaRey = j;
+                    }
+                }
+            }
+
+            // Almacenamos en una variable las posibles posiciones (movimientos) del Rey (comportamiento de la pieza).
+            let movimientos = [
+                [-1, -1], [-1, 0], [-1, 1],
+                [ 0, -1],          [ 0, 1],
+                [ 1, -1], [ 1, 0], [ 1, 1]
+            ]
+
+            let posiciones = []; // Aquí iremos guardando las posiciones del rey a medida que vayamos encontrando posiciones válidas.
+
+
+            // Recorremos el array de movimientos.
+            for (let mov of movimientos) {
+                let nuevaFila = filaRey + mov[0]; // Le asignamos (por ejemplo) que la posición donde está el rey - 1 (primero del array)
+                let nuevaColumna = columnaRey + mov[1]; // le damos nuevo valor en función al array de movimientos.
+
+                /* Añadimos una comprobacción de que no se salgan fuera,
+                comprobando si está dentro de los límites, entre 0 y en este caso N_MATRIZ - 1
+                Por que debe estar entre 0 y 7. */
+
+                if (nuevaFila >= 0 && nuevaFila < N_MATRIZ && nuevaColumna >= 0 && nuevaColumna < N_MATRIZ)
+            }
+            
+        }
+    </script>
+</body>
+</html>
